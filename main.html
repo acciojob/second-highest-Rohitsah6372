@@ -9,7 +9,21 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			let first = Number.MIN_SAFE_INTEGER;
+			let second = Number.MIN_SAFE_INTEGER;
+
+			for(int i=0;i<arr.length;i++){
+				let num = Number(arr[i]); // Convert the prompt inputs to numbers
+
+				if (num > first) {
+					second = first;
+					first = num;
+				} else if (num > second && num < first) {
+					second = num;
+				}
+			}
+
+			return second;
 			
 		}
 
