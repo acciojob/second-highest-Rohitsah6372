@@ -8,7 +8,6 @@
 
 <body>	
 	<script>
-		// Function to find the second highest number in an array
 		function secondHighest(arr) {
 			let first = Number.MIN_SAFE_INTEGER;
 			let second = Number.MIN_SAFE_INTEGER;
@@ -24,24 +23,22 @@
 				}
 			}
 
-			return second === Number.MIN_SAFE_INTEGER ? "No second highest" : second;
+			return second;
 		}
 
-		// Main function to take input and calculate the second highest number
 		function Main() {
-			let n = prompt("Enter the number of elements");
-			let arr = [];
-			for (let i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i + 1));
+			var n = prompt("Enter the number of elements");
+			var arr = [];
+			for (var i = 0; i < n; i++) {
+				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert("Second highest number: " + secondHighest(arr));
+			alert(secondHighest(arr));
 		}
-
-		Main(); // Call the main function
+		// Main();
 	</script>
 
-    <!-- Corrected closing script tag -->
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js">
+</script>
 
 </body>
 
